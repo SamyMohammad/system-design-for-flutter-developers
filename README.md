@@ -1,182 +1,166 @@
-# system-design
+# 📱 Mobile System Design Roadmap (For Flutter & Mobile Developers)
 
-Absolutely, here's a structured Mobile-Focused System Design Roadmap tailored for Flutter/mobile developers aiming for senior-level proficiency:
-
-📱 Mobile System Design Roadmap (3–4 Months)
-🎯 Goal:
+## 🎯 Goal:
 To help mobile developers understand how to architect scalable, maintainable, and high-performance mobile systems with backend interaction, caching, offline-first behavior, scalability, and clean modular structure.
 
-🔹 Phase 1: System Design Foundations (Week 1–2)
-✅ Objectives:
-Understand what System Design means in mobile context.
+---
 
-Learn architectural fundamentals.
+## 🔹 Phase 1: System Design Foundations (Week 1–2)
 
-📚 Topics:
-Monolith vs Microservices (High-level)
+### ✅ Objectives:
+- Understand what System Design means in mobile context.
+- Learn architectural fundamentals.
 
-Client-server architecture
+### 📚 Topics:
+- Monolith vs Microservices (High-level)
+- Client-server architecture
+- REST vs GraphQL
+- HTTP lifecycle
+- JSON vs Protobuf
+- Mobile-specific challenges (limited memory, battery, network issues, offline-first)
 
-REST vs GraphQL
+### 🎓 Resources:
+- [System Design Primer](https://github.com/donnemartin/system-design-primer)
+- Gaurav Sen’s YouTube Channel
+- [High Scalability](http://highscalability.com/)
 
-HTTP lifecycle
+---
 
-JSON vs Protobuf
+## 🔹 Phase 2: Mobile App Architecture (Week 3–4)
 
-Mobile-specific challenges (limited memory, battery, network issues, offline-first)
+### ✅ Objectives:
+- Learn clean modular architecture for mobile
+- Understand layers: Presentation, Domain, Data
 
-🎓 Resources:
-System Design Primer
+### 📚 Topics:
+- MVVM & Clean Architecture
+- Repositories, UseCases, Mappers
+- Dependency Injection (`get_it`, `riverpod`)
+- State management (Cubit, Bloc, Riverpod)
+- SOLID principles
 
-Gaurav Sen’s YouTube videos
+### 🛠️ Practice:
+- Refactor a small project using Clean Architecture
 
-“High Scalability” blog
+---
 
-🔹 Phase 2: Mobile App Architecture (Week 3–4)
-✅ Objectives:
-Learn clean modular architecture for mobile
+## 🔹 Phase 3: Networking & API Design (Week 5–6)
 
-Understand layers: Presentation, Domain, Data
+### ✅ Objectives:
+- Build robust network layers
+- Handle errors, retries, timeouts
 
-📚 Topics:
-MVVM & Clean Architecture
+### 📚 Topics:
+- Designing mobile-friendly APIs
+- Authentication (JWT, OAuth2)
+- Pagination, caching, batching
+- API versioning
+- Rate-limiting
 
-Repositories, UseCases, Mappers
+### 🔧 Tools:
+- `dio`, `http`, `chopper`
+- Postman / Insomnia
 
-Dependency Injection with get_it or riverpod
+---
 
-State management (Cubit, Riverpod, Bloc)
+## 🔹 Phase 4: Local Storage, Caching & Offline Strategy (Week 7–8)
 
-SOLID principles
+### ✅ Objectives:
+- Design offline-first experiences
 
-🛠️ Practice:
-Refactor a small project to clean architecture
+### 📚 Topics:
+- SQLite vs NoSQL (Isar, Hive)
+- Repository pattern with caching
+- Network-bound resource pattern
+- Background sync strategies
 
-🔹 Phase 3: Networking & API Design (Week 5–6)
-✅ Objectives:
-Build robust network layers
+### 📦 Packages:
+- `isar`, `hive`, `moor`
+- `connectivity_plus`, `flutter_cache_manager`
 
-Handle errors, retries, timeouts
+---
 
-📚 Topics:
-Designing mobile-friendly APIs
+## 🔹 Phase 5: Scalable Features & User Growth (Week 9–10)
 
-Authentication flows (JWT, OAuth2)
+### ✅ Objectives:
+- Handle large user bases and scalable app features
 
-Pagination, caching, and batching requests
+### 📚 Topics:
+- Lazy loading & infinite scroll
+- Push notifications (Firebase, OneSignal)
+- In-app purchases
+- Analytics, AB testing
 
-API versioning
+### 🛠️ Tools:
+- Firebase
+- RevenueCat
+- Mixpanel
 
-Rate-limiting
+---
 
-🔧 Tools:
-dio, http, chopper
+## 🔹 Phase 6: Performance & Optimization (Week 11)
 
-Postman/Insomnia
+### ✅ Objectives:
+- Diagnose and fix mobile performance issues
 
-🔹 Phase 4: Local Storage, Caching & Offline Strategy (Week 7–8)
-✅ Objectives:
-Design for offline-first experiences
+### 📚 Topics:
+- Memory management
+- Startup time optimization
+- Jank reduction
+- Code splitting
+- Battery and network usage reduction
 
-📚 Topics:
-SQLite vs NoSQL for mobile (Isar, Hive)
+### 🛠️ Tools:
+- Flutter DevTools
+- LeakCanary (Android), Instruments (iOS)
 
-Repository pattern for caching
+---
 
-Network-bound resource
+## 🔹 Phase 7: Designing for Scale & Teams (Week 12)
 
-Background sync
+### ✅ Objectives:
+- Think like a system designer in large teams
 
-📦 Packages:
-isar, hive, moor
+### 📚 Topics:
+- Modularization and feature folders
+- CI/CD pipelines (GitHub Actions, Codemagic)
+- Architecture documentation
+- Versioning & release cycles
+- Localization & internationalization
 
-connectivity_plus, flutter_cache_manager
+---
 
-🔹 Phase 5: Scalable Features & User Growth (Week 9–10)
-✅ Objectives:
-Understand scalability strategies on mobile
+## 🧪 Phase 8: Case Studies & System Design Interviews (Week 13–16)
 
-📚 Topics:
-Lazy loading / infinite scroll
+### ✅ Projects:
+- Design a WhatsApp Clone
+- Design Uber-like tracking
+- Subscription Tracker App
+- News Feed with Reactions
 
-Push notifications (Firebase, OneSignal)
+### 🔍 Focus On:
+- Database schema design
+- Flow diagrams & sequence diagrams
+- API contract design
+- Offline sync logic
 
-In-app purchases
+---
 
-Analytics & AB testing
+## 📌 Summary Table
 
-Tools:
-Firebase, RevenueCat, Mixpanel
+| Topic                  | Skills Acquired                            |
+|------------------------|--------------------------------------------|
+| App Architecture       | Clean code, modularization                 |
+| API & Networking       | Offline-first, retries, batching           |
+| Storage & Caching      | Data consistency, background sync          |
+| System Scalability     | Lazy loading, push, auth, analytics        |
+| Team-scale Design      | Feature modules, CI/CD, performance        |
 
-🔹 Phase 6: Performance & Optimization (Week 11)
-✅ Objectives:
-Learn how to diagnose and fix mobile performance issues
+---
 
-📚 Topics:
-Memory management
+## 🎁 Bonus Tips
 
-App startup time optimization
+- Contribute to open-source Flutter projects with clean architecture.
+- Practice whiteboarding on Excalidraw or Whimsical.
+- Reverse engineer apps like Notion, YouTube, Instagram.
 
-Reducing jank
-
-Code splitting
-
-Minimizing network and battery usage
-
-Tools:
-Flutter DevTools
-
-LeakCanary (Android), Instruments (iOS)
-
-🔹 Phase 7: Designing for Scale & Teams (Week 12)
-✅ Objectives:
-Think like a system designer in a large team
-
-📚 Topics:
-Modularization and feature folders
-
-CI/CD for teams (GitHub Actions, Codemagic)
-
-App architecture documentation
-
-Release management & app versioning
-
-Internationalization and localization
-
-🧪 Phase 8: Case Studies & Mock System Design Interviews (Week 13–16)
-✅ Projects:
-Design a “WhatsApp clone”
-
-Design an “Uber-like tracking system”
-
-Design a “Subscription Tracker” (your app)
-
-Design a “News Feed with Reactions”
-
-⚙️ Focus On:
-Database schema design
-
-Flow diagrams
-
-Sequence diagrams
-
-API contract design
-
-Offline sync logic
-
-📌 Key Takeaways
-Topic	Skills Acquired
-App Architecture	Clean code, modularization
-API & Networking	Offline-first, retries, batching
-Storage & Caching	Data consistency, background sync
-System Scalability	Lazy loading, push, auth, analytics
-Team-scale Design	Feature modules, CI/CD, performance
-
-🎁 Bonus Tips
-Participate in open-source Flutter projects with solid architecture.
-
-Practice whiteboard design on Excalidraw or Whimsical.
-
-Review apps like Notion, YouTube, or Instagram to analyze how they are designed.
-
-Would you like a Notion template or PDF for this roadmap with links, templates, and tracking tools?
